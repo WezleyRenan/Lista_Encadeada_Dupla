@@ -46,11 +46,11 @@ public class ListaDupla {
 	        } else {
 	            Node novoNode = new Node(conteudo);
 	            Node atual = cabeca;
-	            int currentPosition = 1;
+	            int posicaoAtual = 1;
 
-	            while (atual != null && currentPosition < posicao - 1) {
+	            while (atual != null && posicaoAtual < posicao - 1) {
 	                atual = atual.proximo;
-	                currentPosition++;
+	                posicaoAtual++;
 	            }
 
 	            if (atual == null) {
@@ -110,11 +110,11 @@ public class ListaDupla {
 	        System.out.println();
 	    }
 	    public void MostrarInverso(int tamanho) {
-	        Node currentNode = cauda;
+	        Node atual = cauda;
 
-	        while (currentNode != null && tamanho > 0) {
-	            System.out.println(currentNode.conteudo + " posicao:" + tamanho);
-	            currentNode = currentNode.anterior;
+	        while (atual != null && tamanho > 0) {
+	            System.out.println(atual.conteudo + " posicao:" + tamanho);
+	            atual = atual.anterior;
 	            tamanho--;
 	        }
 
@@ -122,11 +122,11 @@ public class ListaDupla {
 	    }
 	    public int getTamanho() {
 	        int tamanho = 0;
-	        Node currentNode = cabeca;
+	        Node atual = cabeca;
 
-	        while (currentNode != null) {
+	        while (atual != null) {
 	            tamanho++;
-	            currentNode = currentNode.proximo;
+	            atual = atual.proximo;
 	        }
 
 	        return tamanho;
